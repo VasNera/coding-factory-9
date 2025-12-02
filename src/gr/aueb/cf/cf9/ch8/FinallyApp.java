@@ -1,0 +1,39 @@
+package gr.aueb.cf.cf9.ch8;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class FinallyApp {
+    public static void main(String[] args) {
+       // Scanner scanner = new Scanner(System.in);
+        int num = 0;
+
+//        try{
+//            num = scanner.nextInt();
+//            System.out.println("num" + num);
+//
+//        } catch (InputMismatchException e){
+//            System.out.println("error" + e.getMessage());
+//            e.printStackTrace();
+//        } finally {
+//            try{
+//                if (scanner != null){
+//                    scanner.close();
+//                }
+//            } catch (Exception e){
+//                System.out.println("error " + e.getMessage());
+//                e.printStackTrace();
+//            }
+//        }
+
+        try(Scanner scanner = new Scanner(new File("C:/users/a8ana/data.txt"))){
+            num = scanner.nextInt();
+            System.out.println(" num + " + num);
+        }catch (InputMismatchException | FileNotFoundException e){
+            System.out.println(" error " +e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
