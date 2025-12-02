@@ -1,11 +1,8 @@
 package gr.aueb.cf.cf9.ch1;
 
-
 /**
- * Εκτυπώνει "Hello World!
+ * Εκτυπώνει "Hello World!"
  */
-
-
 
 public class HelloWorld {
 
@@ -14,5 +11,4 @@ public class HelloWorld {
         System.out.println("Hello World!");
 
     }
-
 }
