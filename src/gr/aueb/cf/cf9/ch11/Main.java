@@ -35,7 +35,7 @@ public class Main {
 
         bob.setId(2);
         bob.setFirstName("Bob");
-        bob.setLastName("Dylan");
+        bob.setLastName("Papadopoulos");
 
         student.setId(3);
         student.setFirstName("Anna");
