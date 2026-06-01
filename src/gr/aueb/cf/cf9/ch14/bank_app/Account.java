@@ -83,16 +83,18 @@ public class Account {
      * @throws {@Link NegativeAmountException}         if amount is negative.
      */
 
-    public void deposit(double amount)throws NegativeAmountException{
-        try{
-            if (amount < 0 ) throw new NegativeAmountException("The amount " + amount +"should be positive.");
-            balance += amount;
-            //log
-        } catch (NegativeAmountException e) {
-            System.err.println("Negative amount =" + amount +" is not allowed. " + "\n" +e.getMessage());
-            throw e;
+   public void deposit(double amount) throws NegativeAmountException{
+       try{
+           if (amount < 0 ) throw new NegativeAmountException("The amount" + amount + " cannot be negative");
+           balance +=amount;
 
-        }
+       }catch (NegativeAmountException e){
+           System.err.println("Negative amount" + amount + "is not allowed" + "/n" + e.getMessage());
+           throw e;
+
+       }
+
+
     }
 
     /**
